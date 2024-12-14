@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Memory Game</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <h1>Memory Cards</h1>
+
+    <form id = "game-setup">
+        <label for ="player-name">Enter your name:</label>
+        <input type = "text" id = "player-name" placeholder="Your name" required />
+
+        <p><label for ="num-of-pairs">Number of pairs (2-30):</label>
+        <input type = "number" id = "num-of-pairs" min="2" max="30" required /></p>
+
+        <p><button type = "submit">Start Game</button></p>
+    </form>
+
+    <div id = "game-area" style = "display: none;">
+        <div id = "player-info">
+            <h2 id = "player-greeting"></h2>
+            <p>Time: <span id = "game-timer">0</span> seconds</p>
+        </div>
+
+        <div id ="game-grid" class="grid-container"></div>
+        <p><button id ="restart-game" style="display: none;">Play Again</button></p>
+    </div>
+
+    <script src ="index.js"></script>
+</body>
+
+</html>
